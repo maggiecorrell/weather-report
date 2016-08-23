@@ -1,12 +1,14 @@
 import requests
 import json
 
+
 class Weather():
 
-    def __init__(self, zip_code)
-    self.zip_code = zip_code
-    self.url = "http://api.wunderground.com/api/conditions/forecast10day/astronomy/alerts/currenthurricane/{}.json".format(zip_code)
-    json = requests.get(self.url).json()
+    def __init__(self, zip_code):
+        self.zip_code = zip_code
+        self.url = "http://api.wunderground.com/api/conditions/forecast10day/astronomy/alerts/currenthurricane/{}.json".format(zip_code)
+        json = requests.get(self.url).json()
+
 
 class Current():
     # feature = conditions
@@ -17,6 +19,7 @@ class Current():
         self.temp = None
 
     def get_current_weather():
+        pass
 
 class TenDayForecast():
     # feature = forecast10day
@@ -25,6 +28,7 @@ class TenDayForecast():
         self.ten_day = []
 
     def get_ten_day():
+        pass
 
 class Sun():
     # features = astronomy
@@ -34,6 +38,7 @@ class Sun():
         self.sun_set = None
 
     def get_sun():
+        pass
 
 
 class Alerts():
@@ -43,6 +48,7 @@ class Alerts():
         self.alerts = None
 
     def get_alerts():
+        pass
 
 
 class ActiveHurricanes():
@@ -52,3 +58,4 @@ class ActiveHurricanes():
         self.name = []
 
     def get_canes():
+        pass

@@ -1,17 +1,18 @@
-from endpoint import Current, TenDayForcast, Sun, Alerts, ActiveHurricanes
+from endpoint import Weather, Current, TenDayForecast, Sun, Alerts, ActiveHurricanes
 import re
 
 
-def __main__():
+def main():
     zip_code = input("Please enter a 5 digit zipcode: ")
     if re.match(r'\d{5}', zip_code):
         current = Current.get_current_weather()
-        10_day = TenDayForcast.get_ten_day()
+        ten_day = TenDayForecast.get_ten_day()
         sun = Sun.get_sun()
         alerts = Alerts.get_alerts()
         hurricanes = ActiveHurricanes.get_canes()
     else:
         print('Please enter a valid area code!')
+
 
 if __name__ == "__main__":
     main()
